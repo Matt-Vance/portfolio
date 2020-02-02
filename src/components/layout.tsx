@@ -27,7 +27,6 @@ const Header = () => (
             borderBottom: "2px solid #BFBFBF",
             paddingBottom: "8px",
             fontSize: "20px",
-            fontWeight: "400",
             fontFamily: "Segoe UI, sans-serif",
             letterSpacing: "4px"
           }}

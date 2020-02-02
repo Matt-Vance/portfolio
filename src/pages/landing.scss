@@ -1,24 +1,25 @@
 .index-tagline {
-    height: 125px;
-  }
-  
-  .index-tagline span {
-    font-size: 26px;
-    margin: 8px 0;
-    color: #787878;
-  }
-  
-  .index-tagline span span {
-      color: #B4B4B4;
-  }
+  height: 125px;
+  margin-bottom: 40px;
+}
+
+.index-tagline span {
+  font-size: 26px;
+  margin: 8px 0;
+  color: #787878;
+}
+
+.index-tagline span span {
+  color: #b4b4b4;
+}
 
 .project-timeline-container {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .timeline-projects {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }

@@ -1,10 +1,15 @@
 import * as React from "react";
-import Link from "gatsby-link";
+import { useState } from "react";
 
 import Project from "../components/project";
 import Timeline from "../components/timeline";
-import Header from "../components/header";
 import Layout from "../components/layout";
+import ReactIcon from "../icons/ReactIcon";
+import NodeJsIcon from "../icons/NodeJsIcon";
+import GraphQlIcon from "../icons/GraphQlIcon";
+import TypescriptIcon from "../icons/TypescriptIcon";
+import JavascriptIcon from "../icons/JavascriptIcon";
+import PostgresqlIcon from "../icons/PostgreSqlIcon";
 
 import "../layouts/index.css";
 
@@ -20,7 +25,21 @@ interface IndexPageProps {
   };
 }
 
+interface IconIndex {
+  index: number
+}
+
 const Index = ({ data }: IndexPageProps) => {
+  const [iconsActive, handleIconsActive] = useState([1, 1, 1, 1, 1, 1]);
+  console.log(iconsActive);
+  function iconClicked(iconIndex: IconIndex) {
+    console.log(iconIndex);
+    let newIconsActive = [...iconsActive];
+    newIconsActive[iconIndex.index] = !newIconsActive[iconIndex.index];
+    handleIconsActive(newIconsActive);
+  }
+
+
   return (
     <Layout>
       <div>
@@ -36,13 +55,33 @@ const Index = ({ data }: IndexPageProps) => {
             <span>based in</span> southern california
           </span>
         </div>
+        <div className="project-language-container">
+          <span onClick={() => iconClicked({index: 0})}>
+            <JavascriptIcon />
+          </span>
+          <span>
+            <ReactIcon />
+          </span>
+          <span>
+            <TypescriptIcon />
+          </span>
+          <span>
+            <NodeJsIcon />
+          </span>
+          <span>
+            <GraphQlIcon />
+          </span>
+          <span>
+            <PostgresqlIcon />
+          </span>
+        </div>
         <div className="project-timeline-container">
           <Timeline year={2019} />
           <div className="timeline-projects">
             <Project
               name="GEORNAL"
               description="travel tracking web-app"
-              img="../images/Geornal.PNG"
+              img="geornal"
               color="#E7EAEE"
             />
           </div>
@@ -51,13 +90,13 @@ const Index = ({ data }: IndexPageProps) => {
             <Project
               name="CRYPTOPHAN"
               description="cryptocurrency tracker"
-              img=""
+              img="cryptophan"
               color="#CFDCE8"
             />
             <Project
               name="MAMA LLAMA DOULA"
               description="doula business website"
-              img=""
+              img="mamallamadoula"
               color="#F3ECFA"
             />
           </div>
