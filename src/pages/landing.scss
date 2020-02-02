@@ -1,0 +1,24 @@
+.index-tagline {
+    height: 125px;
+  }
+  
+  .index-tagline span {
+    font-size: 26px;
+    margin: 8px 0;
+    color: #787878;
+  }
+  
+  .index-tagline span span {
+      color: #B4B4B4;
+  }
+
+.project-timeline-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.timeline-projects {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
