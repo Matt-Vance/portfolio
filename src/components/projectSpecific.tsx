@@ -42,6 +42,33 @@ function ProjectSpecific({
           }
         }
       }
+      cryptophanPrice: file(relativePath: { eq: "Cryptophan_PriceTracker.PNG" }) {
+        childImageSharp {
+          # Specify the image processing specifications right in the query.
+          # Makes it trivial to update as your page's design changes.
+          fixed(width: 300, height: 150) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      cryptophanATH: file(relativePath: { eq: "Cryptophan_ATH.PNG" }) {
+        childImageSharp {
+          # Specify the image processing specifications right in the query.
+          # Makes it trivial to update as your page's design changes.
+          fixed(width: 300, height: 150) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      cryptophanWeekly: file(relativePath: { eq: "Cryptophan_Weekly.PNG" }) {
+        childImageSharp {
+          # Specify the image processing specifications right in the query.
+          # Makes it trivial to update as your page's design changes.
+          fixed(width: 300, height: 150) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
     }
   `);
 

@@ -6,6 +6,7 @@ import ProjectSpecific from "../components/projectSpecific";
 import ReactIcon from "../icons/ReactIcon";
 import NodeJsIcon from "../icons/NodeJsIcon";
 import GraphQlIcon from "../icons/GraphQlIcon";
+import GithubIcon from "../icons/GithubIcon";
 
 const GeornalPage = () => (
   <Layout>
@@ -25,17 +26,29 @@ const GeornalPage = () => (
         </p>
         <p>
           Geornal was an idea my wife and I had to try to improve our trip
-          planning process. It is still in "beta" and was built with a couple of
-          people on the online coding group "Project Unicorn"
+          planning process. It is still in "beta" and was built in collaboration
+          with a couple of people on the online coding group "Project Unicorn"
         </p>
         <span>
           <a href="https://geornal.herokuapp.com">Go to Website</a>
         </span>
       </div>
       <div className="project-language-container">
-        <ReactIcon />
-        <NodeJsIcon />
-        <GraphQlIcon />
+        <span>
+          <ReactIcon />
+        </span>
+        <span>
+          <GithubIcon />
+        </span>
+        <span>
+          <NodeJsIcon />
+        </span>
+        <span>
+          <GraphQlIcon />
+        </span>
+        <span>
+          <GithubIcon />
+        </span>
       </div>
       <div className="timeline-container">
         <ProjectSpecific

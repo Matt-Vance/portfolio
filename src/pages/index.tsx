@@ -26,7 +26,7 @@ interface IndexPageProps {
 }
 
 interface IconIndex {
-  index: number
+  index: number;
 }
 
 const Index = ({ data }: IndexPageProps) => {
@@ -39,7 +39,6 @@ const Index = ({ data }: IndexPageProps) => {
     handleIconsActive(newIconsActive);
   }
 
-
   return (
     <Layout>
       <div>
@@ -48,15 +47,18 @@ const Index = ({ data }: IndexPageProps) => {
           style={{ display: "flex", flexDirection: "column" }}
         >
           <span>
-            designer <span>and</span>
+            junior designer <span>and</span>
           </span>
-          <span>front-end developer</span>
+          <span>web developer</span>
           <span>
             <span>based in</span> southern california
           </span>
         </div>
-        <div className="project-language-container">
-          <span onClick={() => iconClicked({index: 0})}>
+        <div
+          className="project-language-container"
+          id="language-container-main"
+        >
+          <span onClick={() => iconClicked({ index: 0 })}>
             <JavascriptIcon />
           </span>
           <span>
@@ -81,6 +83,12 @@ const Index = ({ data }: IndexPageProps) => {
             <Project
               name="GEORNAL"
               description="travel tracking web-app"
+              img="geornal"
+              color="#E7EAEE"
+            />
+            <Project
+              name="PORTFOLIO"
+              description="this website"
               img="geornal"
               color="#E7EAEE"
             />
