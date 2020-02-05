@@ -14,7 +14,7 @@ const Header = () => (
       style={{
         margin: "0 auto",
         maxWidth: 960,
-        padding: "1.45rem 1.0875rem",
+        padding: "10px 0 20px 0",
         textAlign: "center"
       }}
     >
@@ -36,7 +36,7 @@ const Header = () => (
         </Link>
       </h1>
     </div>
-    
+    <div className = 'hamburger'></div>
   </div>
 );
 

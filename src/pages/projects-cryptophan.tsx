@@ -15,7 +15,7 @@ const CryptophanPage = () => (
         <p>
           Cryptophan uses the cryptocompare api to track price history, all time
           high, weekly, and hourly patterns for cryptocurrencies. It provides an
-          easy-to-use interface with a slider to choose how much data is
+          easy-to-use interface with a slider to choose how much data (from cryptocompare api) is
           displayed on a Plotly chart.
         </p>
         <p>

@@ -40,6 +40,24 @@ function Project({ name, description, img, color }: ProjectProps) {
           }
         }
       }
+      tasklist: file(relativePath: { eq: "Todo_Tasks.PNG" }) {
+        childImageSharp {
+          # Specify the image processing specifications right in the query.
+          # Makes it trivial to update as your page's design changes.
+          fixed(width: 300, height: 150) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      pomodoro: file(relativePath: { eq: "Pomodoro.PNG" }) {
+        childImageSharp {
+          # Specify the image processing specifications right in the query.
+          # Makes it trivial to update as your page's design changes.
+          fixed(width: 260, height: 200) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
     }
   `);
 
@@ -50,7 +68,9 @@ function Project({ name, description, img, color }: ProjectProps) {
           className="project-display-container"
           style={{ background: color }}
         >
-          <Img fixed={data[img].childImageSharp.fixed} />
+          <span>
+            <Img fixed={data[img].childImageSharp.fixed} />
+          </span>
         </div>
         <div className="project-info-container">
           <span>{name}</span>
@@ -62,4 +82,3 @@ function Project({ name, description, img, color }: ProjectProps) {
 }
 
 export default Project;
-

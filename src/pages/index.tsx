@@ -30,13 +30,22 @@ interface IconIndex {
 }
 
 const Index = ({ data }: IndexPageProps) => {
-  const [iconsActive, handleIconsActive] = useState([1, 1, 1, 1, 1, 1]);
-  console.log(iconsActive);
+  const [iconsActive, handleIconsActive] = useState([true, true,true, true,true, true]);
   function iconClicked(iconIndex: IconIndex) {
-    console.log(iconIndex);
-    let newIconsActive = [...iconsActive];
-    newIconsActive[iconIndex.index] = !newIconsActive[iconIndex.index];
-    handleIconsActive(newIconsActive);
+    if (iconsActive.indexOf(false) === -1) {
+      let newIconsActive = [false, false, false, false, false, false];
+      newIconsActive[iconIndex.index] = true;
+      handleIconsActive(newIconsActive);
+    } else {
+      let newIconsActive = [...iconsActive];
+      newIconsActive[iconIndex.index] = !newIconsActive[iconIndex.index];
+      if (newIconsActive.indexOf(true) === -1) {
+        newIconsActive = [true, true,true, true,true, true];
+        handleIconsActive(newIconsActive);
+      } else {
+        handleIconsActive(newIconsActive);
+      }
+    }
   }
 
   return (
@@ -58,55 +67,107 @@ const Index = ({ data }: IndexPageProps) => {
           className="project-language-container"
           id="language-container-main"
         >
-          <span onClick={() => iconClicked({ index: 0 })}>
+          <span
+            onClick={() => iconClicked({ index: 0 })}
+            style={{ opacity: iconsActive[0] ? 1 : 0.25 }}
+          >
             <JavascriptIcon />
           </span>
-          <span>
+          <span
+            onClick={() => iconClicked({ index: 1 })}
+            style={{ opacity: iconsActive[1] ? 1 : 0.25 }}
+          >
             <ReactIcon />
           </span>
-          <span>
+          <span
+            onClick={() => iconClicked({ index: 2 })}
+            style={{ opacity: iconsActive[2] ? 1 : 0.25 }}
+          >
             <TypescriptIcon />
           </span>
-          <span>
+          <span
+            onClick={() => iconClicked({ index: 3 })}
+            style={{ opacity: iconsActive[3] ? 1 : 0.25 }}
+          >
             <NodeJsIcon />
           </span>
-          <span>
+          <span
+            onClick={() => iconClicked({ index: 4 })}
+            style={{ opacity: iconsActive[4] ? 1 : 0.25 }}
+          >
             <GraphQlIcon />
           </span>
-          <span>
+          <span
+            onClick={() => iconClicked({ index: 5 })}
+            style={{ opacity: iconsActive[5] ? 1 : 0.25 }}
+          >
             <PostgresqlIcon />
           </span>
         </div>
         <div className="project-timeline-container">
+          <Timeline year={2020} />
+          <div className="timeline-projects">
+            {iconsActive[0] || iconsActive[1] || iconsActive[2] ? (
+              <Project
+                name="PORTFOLIO"
+                description="this website"
+                img="geornal"
+                color="#E7EAEE"
+              />
+            ) : null}
+          </div>
           <Timeline year={2019} />
           <div className="timeline-projects">
-            <Project
-              name="GEORNAL"
-              description="travel tracking web-app"
-              img="geornal"
-              color="#E7EAEE"
-            />
-            <Project
-              name="PORTFOLIO"
-              description="this website"
-              img="geornal"
-              color="#E7EAEE"
-            />
+            {iconsActive[0] ||
+            iconsActive[1] ||
+            iconsActive[3] ||
+            iconsActive[4] ||
+            iconsActive[5] ? (
+              <Project
+                name="GEORNAL"
+                description="travel tracking web-app"
+                img="geornal"
+                color="#E7EAEE"
+              />
+            ) : null}
           </div>
           <Timeline year={2018} />
           <div className="timeline-projects">
-            <Project
-              name="CRYPTOPHAN"
-              description="cryptocurrency tracker"
-              img="cryptophan"
-              color="#CFDCE8"
-            />
-            <Project
-              name="MAMA LLAMA DOULA"
-              description="doula business website"
-              img="mamallamadoula"
-              color="#F3ECFA"
-            />
+            {iconsActive[0] ? (
+              <Project
+                name="CRYPTOPHAN"
+                description="cryptocurrency tracker"
+                img="cryptophan"
+                color="#CFDCE8"
+              />
+            ) : null}
+            {iconsActive[0] || iconsActive[1] ? (
+              <Project
+                name="TO DO LIST"
+                description="daily/weekly/monthly task list"
+                img="tasklist"
+                color="#F3ECFA"
+              />
+            ) : null}
+            {iconsActive[0] ? (
+              <Project
+                name="MAMA LLAMA DOULA"
+                description="doula business website"
+                img="mamallamadoula"
+                color="#f0e3d5"
+              />
+            ) : null}
+          </div>
+          <Timeline year={2017} />
+          <div className="timeline-projects">
+            {iconsActive[0] ? (
+              <Project
+                name="POMODORO"
+                description="digital timer"
+                img="pomodoro"
+                color="#ced5f5"
+              />
+            ) : null}
           </div>
         </div>
 
