@@ -627,8 +627,19 @@ pre tt:before,
 pre tt:after {
   content: "";
 }
+
+.hamburger {
+  width: 60px;
+  height: 60px;
+  background: white;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;
   }
 }
+
