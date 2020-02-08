@@ -1,44 +1,58 @@
 import * as React from "react";
+import { useState } from "react";
 import Link from "gatsby-link";
 import Helmet from "react-helmet";
 
-
-
-const Header = () => (
-  <div
-    style={{
-      marginBottom: "1.45rem"
-    }}
-  >
+function Header() {
+  const [hamburgerActive, handleHamburgerClick] = useState(false);
+  return (
     <div
+      className="header"
       style={{
-        margin: "0 auto",
-        maxWidth: 960,
-        padding: "10px 0 20px 0",
-        textAlign: "center"
+        marginBottom: "1.45rem"
       }}
     >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: "rgb(94, 109, 110)",
-            textDecoration: "none",
-            borderBottom: "2px solid #BFBFBF",
-            paddingBottom: "8px",
-            fontSize: "20px",
-            fontFamily: "Segoe UI, sans-serif",
-            letterSpacing: "4px"
-          }}
-        >
-          <span style={{ fontSize: "24px" }}>M</span>ATT{" "}
-          <span style={{ fontSize: "24px" }}>V</span>ANCE
-        </Link>
-      </h1>
+      <div
+        style={{
+          margin: "0 auto",
+          maxWidth: 960,
+          padding: "10px 0 20px 0",
+          textAlign: "center"
+        }}
+      >
+        <h1 style={{ margin: 0 }}>
+          <Link
+            to="/"
+            style={{
+              color: "rgb(94, 109, 110)",
+              textDecoration: "none",
+              borderBottom: "2px solid #BFBFBF",
+              paddingBottom: "8px",
+              fontSize: "20px",
+              fontFamily: "Segoe UI, sans-serif",
+              letterSpacing: "4px"
+            }}
+          >
+            <span style={{ fontSize: "24px" }}>M</span>ATT{" "}
+            <span style={{ fontSize: "24px" }}>V</span>ANCE
+          </Link>
+        </h1>
+      </div>
+      <div
+        className={hamburgerActive ? "ham active" : "ham"}
+        onClick={() => handleHamburgerClick(!hamburgerActive)}
+      >
+        <span className="top"></span>
+        <span className="middle"></span>
+        <span className="bottom"></span>
+      </div>
+      <div className={hamburgerActive ? "nav-menu" : "nav-menu hide"}>
+        <Link to="/">home</Link>
+        <Link to="/about">about</Link>
+      </div>
     </div>
-    <div className = 'hamburger'></div>
-  </div>
-);
+  );
+}
 
 interface DefaultLayoutProps extends React.HTMLProps<HTMLDivElement> {
   location: {
@@ -59,11 +73,9 @@ const DefaultLayout = ({ location, children }: DefaultLayoutProps) => {
       />
       <Header />
       <div
+        className="main"
         style={{
-          margin: "0 auto",
-          maxWidth: 960,
-          padding: "0px 1.0875rem 1.45rem",
-          paddingTop: 0
+          maxWidth: 960
         }}
       >
         {children}

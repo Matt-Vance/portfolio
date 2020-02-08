@@ -30,7 +30,14 @@ interface IconIndex {
 }
 
 const Index = ({ data }: IndexPageProps) => {
-  const [iconsActive, handleIconsActive] = useState([true, true,true, true,true, true]);
+  const [iconsActive, handleIconsActive] = useState([
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+  ]);
   function iconClicked(iconIndex: IconIndex) {
     if (iconsActive.indexOf(false) === -1) {
       let newIconsActive = [false, false, false, false, false, false];
@@ -40,7 +47,7 @@ const Index = ({ data }: IndexPageProps) => {
       let newIconsActive = [...iconsActive];
       newIconsActive[iconIndex.index] = !newIconsActive[iconIndex.index];
       if (newIconsActive.indexOf(true) === -1) {
-        newIconsActive = [true, true,true, true,true, true];
+        newIconsActive = [true, true, true, true, true, true];
         handleIconsActive(newIconsActive);
       } else {
         handleIconsActive(newIconsActive);
@@ -103,6 +110,7 @@ const Index = ({ data }: IndexPageProps) => {
           >
             <PostgresqlIcon />
           </span>
+          <label className="language-filter-label">Click to Filter</label>
         </div>
         <div className="project-timeline-container">
           <Timeline year={2020} />
