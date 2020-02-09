@@ -62,7 +62,7 @@ function Project({ name, description, img, color }: ProjectProps) {
   `);
 
   return (
-    <Link to={"/projects-" + name.toLowerCase() + "/"}>
+    <Link to={"/projects-" + name.toLowerCase().split(' ').join('') + "/"}>
       <div className="project-container">
         <div
           className="project-display-container"
