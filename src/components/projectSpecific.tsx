@@ -69,6 +69,42 @@ function ProjectSpecific({
           }
         }
       }
+      tasklist: file(relativePath: { eq: "Todo_Tasks.PNG" }) {
+        childImageSharp {
+          # Specify the image processing specifications right in the query.
+          # Makes it trivial to update as your page's design changes.
+          fixed(width: 300, height: 150) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      mamallamamain: file(relativePath: { eq: "Mamallamadoula.PNG" }) {
+        childImageSharp {
+          # Specify the image processing specifications right in the query.
+          # Makes it trivial to update as your page's design changes.
+          fixed(width: 300, height: 150) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      mamallamaservices: file(relativePath: { eq: "Mamallamadoula_Services.PNG" }) {
+        childImageSharp {
+          # Specify the image processing specifications right in the query.
+          # Makes it trivial to update as your page's design changes.
+          fixed(width: 300, height: 150) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      mamallamafaq: file(relativePath: { eq: "Mamallamadoula_FAQ.PNG" }) {
+        childImageSharp {
+          # Specify the image processing specifications right in the query.
+          # Makes it trivial to update as your page's design changes.
+          fixed(width: 300, height: 150) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
     }
   `);
 
