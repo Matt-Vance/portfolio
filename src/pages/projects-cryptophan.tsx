@@ -26,7 +26,7 @@ const CryptophanPage = () => (
           This was my first attempt at using a graphing library in combination
           with an api
         </p>
-        <span>
+        <span className = 'goto-website'>
           <a href="https://geornal.herokuapp.com">Go to Website</a>
         </span>
       </div>

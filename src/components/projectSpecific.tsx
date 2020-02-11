@@ -105,6 +105,15 @@ function ProjectSpecific({
           }
         }
       }
+      pomodoro: file(relativePath: { eq: "Pomodoro.PNG" }) {
+        childImageSharp {
+          # Specify the image processing specifications right in the query.
+          # Makes it trivial to update as your page's design changes.
+          fixed(width: 260, height: 200) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
     }
   `);
 

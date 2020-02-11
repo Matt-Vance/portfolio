@@ -29,7 +29,7 @@ const GeornalPage = () => (
           planning process. It is still in "beta" and was built in collaboration
           with a couple of people on the online coding group "Project Unicorn"
         </p>
-        <span>
+        <span className = 'goto-website'>
           <a href="https://geornal.herokuapp.com">Go to Website</a>
         </span>
       </div>

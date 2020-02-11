@@ -25,7 +25,7 @@ const TodolistPage = () => (
           basic web app like working with dates, nav menus, and state/props of
           components.
         </p>
-        <span>
+        <span className = 'goto-website'>
           <a href="https://geornal.herokuapp.com">Go to Website</a>
         </span>
       </div>

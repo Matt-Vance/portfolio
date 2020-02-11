@@ -104,12 +104,6 @@ const Index = ({ data }: IndexPageProps) => {
           >
             <GraphQlIcon />
           </span>
-          <span
-            onClick={() => iconClicked({ index: 5 })}
-            style={{ opacity: iconsActive[5] ? 1 : 0.25 }}
-          >
-            <PostgresqlIcon />
-          </span>
           <label className="language-filter-label">Click to Filter</label>
         </div>
         <div className="project-timeline-container">
