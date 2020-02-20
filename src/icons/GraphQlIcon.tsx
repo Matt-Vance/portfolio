@@ -10,7 +10,7 @@ function GraphQlIcon() {
     id="GraphQL_Logo"
     viewBox="0 0 400 400"
     version="1.1"
-    enable-background="new 0 0 400 400"
+    enableBackground="new 0 0 400 400"
     onMouseOver={() => handleHover(true)}
     onMouseOut={() => handleHover(false)}
   >

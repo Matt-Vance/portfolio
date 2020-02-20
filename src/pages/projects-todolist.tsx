@@ -26,7 +26,7 @@ const TodolistPage = () => (
           components.
         </p>
         <span className = 'goto-website'>
-          <a href="https://geornal.herokuapp.com">Go to Website</a>
+          <a href="https://tasklist-mv.herokuapp.com/">Go to Website</a>
         </span>
       </div>
       <div className="project-language-container">

@@ -14,46 +14,35 @@ function Project({ name, description, img, color }: ProjectProps) {
   const data = useStaticQuery(graphql`
     query {
       geornal: file(relativePath: { eq: "Geornal.PNG" }) {
-        childImageSharp {
-          # Specify the image processing specifications right in the query.
-          # Makes it trivial to update as your page's design changes.
-          fixed(width: 300, height: 150) {
+        childImageSharp {          fixed(width: 1200, height: 600) {
             ...GatsbyImageSharpFixed
           }
         }
       }
       cryptophan: file(relativePath: { eq: "CryptoPhan.PNG" }) {
         childImageSharp {
-          # Specify the image processing specifications right in the query.
-          # Makes it trivial to update as your page's design changes.
-          fixed(width: 300, height: 140) {
+          fixed(width: 1200, height: 600) {
             ...GatsbyImageSharpFixed
           }
         }
       }
       mamallamadoula: file(relativePath: { eq: "Mamallamadoula.PNG" }) {
         childImageSharp {
-          # Specify the image processing specifications right in the query.
-          # Makes it trivial to update as your page's design changes.
-          fixed(width: 300, height: 150) {
+          fixed(width: 740, height: 370){
             ...GatsbyImageSharpFixed
           }
         }
       }
       tasklist: file(relativePath: { eq: "Todo_Tasks.PNG" }) {
         childImageSharp {
-          # Specify the image processing specifications right in the query.
-          # Makes it trivial to update as your page's design changes.
-          fixed(width: 300, height: 150) {
+          fixed(width: 1200, height: 600) {
             ...GatsbyImageSharpFixed
           }
         }
       }
       pomodoro: file(relativePath: { eq: "Pomodoro.PNG" }) {
         childImageSharp {
-          # Specify the image processing specifications right in the query.
-          # Makes it trivial to update as your page's design changes.
-          fixed(width: 260, height: 200) {
+          fixed(width: 800) {
             ...GatsbyImageSharpFixed
           }
         }

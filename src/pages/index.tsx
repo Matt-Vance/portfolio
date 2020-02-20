@@ -11,7 +11,7 @@ import TypescriptIcon from "../icons/TypescriptIcon";
 import JavascriptIcon from "../icons/JavascriptIcon";
 import PostgresqlIcon from "../icons/PostgreSqlIcon";
 
-import "../layouts/index.css";
+import "../layouts/index.scss";
 
 // Please note that you can use https://github.com/dotansimha/graphql-code-generator
 // to generate all types from graphQL schema

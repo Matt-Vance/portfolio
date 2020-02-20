@@ -1,6 +1,9 @@
 .index-tagline {
   height: 125px;
   margin-bottom: 40px;
+  @media screen and (min-width: 600px){
+    align-items: center; 
+  }
 }
 
 .index-tagline span {
@@ -20,6 +23,33 @@
 
 .timeline-projects {
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  a .project-display-container {
+
+  }
+  .gatsby-image-wrapper {
+    max-width: 300px;
+    max-height: 150px;
+  }
+  img {
+    max-width: 300px;
+    max-height: 150px;
+  }
+  @media screen and (min-width: 1000px) {
+    a .project-display-container {
+      min-width: 880px;
+      min-height: 480px;
+    }
+    .gatsby-image-wrapper {
+      max-width: 740px;
+      max-height: 370px;
+    }
+    img {
+      max-width: 740px;
+      max-height: 370px;
+    }
+  }
 }
+
+
