@@ -38,9 +38,6 @@ const GeornalPage = () => (
           <ReactIcon />
         </span>
         <span>
-          <GithubIcon />
-        </span>
-        <span>
           <NodeJsIcon />
         </span>
         <span>
@@ -49,6 +46,15 @@ const GeornalPage = () => (
         <span>
           <GithubIcon />
         </span>
+      </div>
+      <div className = 'project-challenges-container'>
+        <span>EXPERIENCE GAINED</span>
+        <ul>
+          <li>Working with map libraries</li>
+          <li>Hooks/Context</li>
+          <li>Performance Optimization/Code Splitting</li>
+          <li>Apollo/GraphQL</li>
+        </ul>
       </div>
       <div className="timeline-container">
         <ProjectSpecific

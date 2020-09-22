@@ -25,9 +25,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  a .project-display-container {
-
-  }
   .gatsby-image-wrapper {
     max-width: 300px;
     max-height: 150px;
@@ -50,6 +47,20 @@
       max-height: 370px;
     }
   }
+  // @media screen and (min-width: 800px) {
+  //   a .project-display-container {
+  //     min-width: 680px;
+  //     min-height: 340px;
+  //   }
+  //   .gatsby-image-wrapper {
+  //     max-width: 540px;
+  //     max-height: 270px;
+  //   }
+  //   img {
+  //     max-width: 540px;
+  //     max-height: 270px;
+  //   }
+  // }
 }
 
 

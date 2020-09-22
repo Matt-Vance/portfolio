@@ -28,6 +28,13 @@ const PomodoroPage = () => (
       <div className="project-language-container">
         <JavascriptIcon />
       </div>
+      <div className = 'project-challenges-container'>
+        <span>EXPERIENCE GAINED</span>
+        <ul>
+          <li>First site with JS</li>
+          <li>Working with time</li>
+        </ul>
+      </div>
       <div className="timeline-container">
         <ProjectSpecific
           description="pomodoro timer set to 25 minutes"

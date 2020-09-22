@@ -25,7 +25,7 @@ const TodolistPage = () => (
           basic web app like working with dates, nav menus, and state/props of
           components.
         </p>
-        <span className = 'goto-website'>
+        <span className="goto-website">
           <a href="https://tasklist-mv.herokuapp.com/">Go to Website</a>
         </span>
       </div>
@@ -33,11 +33,23 @@ const TodolistPage = () => (
         <JavascriptIcon />
         <ReactIcon />
       </div>
+      <div className="project-challenges-container">
+        <span>EXPERIENCE GAINED</span>
+        <ul>
+          <li>React basics</li>
+          <li>More responsiveness practice</li>
+        </ul>
+      </div>
       <div className="timeline-container">
         <ProjectSpecific
           description="to do list showing three time frames"
           img="tasklist"
           color="#E6E2ED"
+        />
+        <ProjectSpecific
+          description="edit tasks view"
+          img="tasklistEdit"
+          color="#e2e2e2"
         />
       </div>
     </div>

@@ -33,6 +33,14 @@ const CryptophanPage = () => (
       <div className="project-language-container">
         <JavascriptIcon />
       </div>
+      <div className = 'project-challenges-container'>
+        <span>EXPERIENCE GAINED</span>
+        <ul>
+          <li>Working with graphing libraries</li>
+          <li>Use of multiple currency/stock apis</li>
+          <li>Dealing with dates</li>
+        </ul>
+      </div>
       <div className="timeline-container">
         <ProjectSpecific
           description="price tracking tool (candlestick chart)"

@@ -7,7 +7,6 @@ import Layout from "../components/layout";
 import ReactIcon from "../icons/ReactIcon";
 import NodeJsIcon from "../icons/NodeJsIcon";
 import GraphQlIcon from "../icons/GraphQlIcon";
-import TypescriptIcon from "../icons/TypescriptIcon";
 import JavascriptIcon from "../icons/JavascriptIcon";
 import PostgresqlIcon from "../icons/PostgreSqlIcon";
 
@@ -90,7 +89,7 @@ const Index = ({ data }: IndexPageProps) => {
             onClick={() => iconClicked({ index: 2 })}
             style={{ opacity: iconsActive[2] ? 1 : 0.25 }}
           >
-            <TypescriptIcon />
+            <PostgresqlIcon />
           </span>
           <span
             onClick={() => iconClicked({ index: 3 })}
@@ -109,7 +108,7 @@ const Index = ({ data }: IndexPageProps) => {
         <div className="project-timeline-container">
           <Timeline year={2020} />
           <div className="timeline-projects">
-            {iconsActive[0] || iconsActive[1] || iconsActive[2] ? (
+            {iconsActive[0] || iconsActive[1] ? (
               <Project
                 name="PORTFOLIO"
                 description="this website"
@@ -124,7 +123,7 @@ const Index = ({ data }: IndexPageProps) => {
             iconsActive[1] ||
             iconsActive[3] ||
             iconsActive[4] ||
-            iconsActive[5] ? (
+            iconsActive[2] ? (
               <Project
                 name="GEORNAL"
                 description="travel tracking web-app"
@@ -172,8 +171,6 @@ const Index = ({ data }: IndexPageProps) => {
             ) : null}
           </div>
         </div>
-
-        {/* <Link to="/page-2/">Go to page 2</Link> */}
       </div>
     </Layout>
   );

@@ -31,12 +31,11 @@ function About() {
           through FreeCodeCamp, Youtube, Medium articles, you name it. I have
           created some projects on my own and through the collaborative group
           Project Unicorn -- my goal at the moment is to find a remote
-          internship/part time job where I can contribute to a project alongside
+          freelance/part time job where I can contribute to a project alongside
           other dedicated developers.
         </p>
         <p>
-          Outside of coding, I enjoy playing the guitar, basketball, and just
-          being with my wife, daughter, and dog.
+          Outside of coding, I enjoy playing the guitar, basketball, and relaxing with my wife, daughter, and dog.
         </p>
       </div>
     </Layout>

@@ -29,6 +29,14 @@ const MamallamaPage = () => (
       <div className="project-language-container">
         <JavascriptIcon />
       </div>
+      <div className = 'project-challenges-container'>
+        <span>EXPERIENCE GAINED</span>
+        <ul>
+          <li>Very basic JS</li>
+          <li>First try at responsiveness</li>
+          <li>Deployment of a website</li>
+        </ul>
+      </div>
       <div className="timeline-container">
         <ProjectSpecific
           description="main landing screen"
