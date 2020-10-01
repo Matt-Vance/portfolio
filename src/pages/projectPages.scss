@@ -1,11 +1,27 @@
+.goto-website {
+  background: #87a5b9;
+  color: rgb(248, 248, 252);
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  margin: 40px auto;
+  border-radius: 8px;
+  box-shadow: 1px 2px 2px 0 rgba(0, 0, 0, 0.15);
+  text-decoration: none;
+}
+
 .project-language-container {
   position: relative;
   display: flex;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   width: 100%;
+  max-width: 400px;
   height: 60px;
-  margin: 8px 0 40px 0;
+  margin: 8px auto 40px;
   background: rgb(248, 248, 252);
   border-radius: 8px;
   box-shadow: 0px 1px 0 1px rgba(0, 0, 0, 0.15);
@@ -13,25 +29,46 @@
 
 .project-language-container svg {
   height: 40px;
+  min-width: 60px;
+  transform: translateY(2px);
 }
 
-#language-container-main svg{
-    height: 34px;
+#language-container-main svg {
+  height: 34px;
 }
 
 .language-title {
-    position: absolute;
-    top: -32px;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    color: #b4b4b4;
-    font-size: 14px;
+  position: absolute;
+  top: -32px;
+  left: 0;
+  min-width: 60px;
+  display: flex;
+  justify-content: center;
+  color: #b4b4b4;
+  font-size: 14px;
+}
+
+.project-challenges-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 12px;
+  padding: 0 15px;
+  font-size: 16px;
+  color: #aaaaaa;
+  span {
+    font-weight: 550;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+  }
+}
+
+.project-specific-container .language-title {
+  top: -24px;
 }
 
 .project-language-container span {
-    position: relative;
+  position: relative;
 }
 
 .project-language-container label {
@@ -41,5 +78,35 @@
   bottom: -24px;
   left: calc(50% - 100px);
   width: 200px;
-  color: rgb(180, 180, 180);
+  color: rgb(212, 212, 212);
+}
+
+.timeline-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-title-container {
+  display: flex;
+  justify-content: space-between;
+  .project-title-sub {
+    display: flex;
+    flex-direction: column;
+  }
+  svg {
+    width: 24px;
+    height: 24px;
+    margin: 0 0 0 12px;
+  }
+  .project-title-icons {
+    position: relative;
+  }
+  .language-title {
+    transform: translateX(-8px);
+    z-index: 100;
+  }
+  .language-title-right {
+    transform: translateX(24px);
+  }
 }

@@ -3,15 +3,25 @@ import * as React from "react";
 import Layout from "../components/layout";
 import ProjectSpecific from "../components/projectSpecific";
 import JavascriptIcon from "../icons/JavascriptIcon";
+import GithubIcon from "../icons/GithubIcon";
+import DemoIcon from "../icons/DemoIcon";
 
 const CryptophanPage = () => (
   <Layout>
     <div className="project-specific-container">
       <div className="project-info-container">
-        <span>
-          CRYPTOPHAN<span className="year-line"></span>
-        </span>
-        <span>cryptocurrency tracker</span>
+        <div className="project-title-container">
+          <div className="project-title-sub">
+            <span>
+            CRYPTOPHAN<span className="year-line"></span>
+            </span>
+            <span>cryptocurrency tracker</span>
+          </div>
+          <div className="project-title-icons">
+            <GithubIcon link={"https://github.com/mvance43776/Cryptophan-React"}/>
+            <DemoIcon link={"https://geornal.herokuapp.com"} />
+          </div>
+        </div>
         <p>
           Cryptophan uses the cryptocompare api to track price history, all time
           high, weekly, and hourly patterns for cryptocurrencies. It provides an
@@ -26,12 +36,17 @@ const CryptophanPage = () => (
           This was my first attempt at using a graphing library in combination
           with an api
         </p>
-        <span>
-          <a href="https://geornal.herokuapp.com">Go to Website</a>
-        </span>
       </div>
       <div className="project-language-container">
         <JavascriptIcon />
+      </div>
+      <div className = 'project-challenges-container'>
+        <span>EXPERIENCE GAINED</span>
+        <ul>
+          <li>Working with graphing libraries</li>
+          <li>Use of multiple currency/stock apis</li>
+          <li>Dealing with dates</li>
+        </ul>
       </div>
       <div className="timeline-container">
         <ProjectSpecific

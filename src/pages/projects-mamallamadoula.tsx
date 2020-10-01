@@ -22,12 +22,20 @@ const MamallamaPage = () => (
           HTML/CSS-only website. It tried to emphasize readabiilty and
           simplicity with big text and lots of white-space.
         </p>
-        <span>
+        <span className = 'goto-website'>
           <a href="https://geornal.herokuapp.com">Go to Website</a>
         </span>
       </div>
       <div className="project-language-container">
         <JavascriptIcon />
+      </div>
+      <div className = 'project-challenges-container'>
+        <span>EXPERIENCE GAINED</span>
+        <ul>
+          <li>Very basic JS</li>
+          <li>First try at responsiveness</li>
+          <li>Deployment of a website</li>
+        </ul>
       </div>
       <div className="timeline-container">
         <ProjectSpecific

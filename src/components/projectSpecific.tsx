@@ -78,6 +78,15 @@ function ProjectSpecific({
           }
         }
       }
+      tasklistEdit: file(relativePath: { eq: "Todo_Tasks_Edit.PNG" }) {
+        childImageSharp {
+          # Specify the image processing specifications right in the query.
+          # Makes it trivial to update as your page's design changes.
+          fixed(width: 320, height: 180) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
       mamallamamain: file(relativePath: { eq: "Mamallamadoula.PNG" }) {
         childImageSharp {
           # Specify the image processing specifications right in the query.
@@ -101,6 +110,15 @@ function ProjectSpecific({
           # Specify the image processing specifications right in the query.
           # Makes it trivial to update as your page's design changes.
           fixed(width: 300, height: 150) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      pomodoro: file(relativePath: { eq: "Pomodoro.PNG" }) {
+        childImageSharp {
+          # Specify the image processing specifications right in the query.
+          # Makes it trivial to update as your page's design changes.
+          fixed(width: 260, height: 200) {
             ...GatsbyImageSharpFixed
           }
         }

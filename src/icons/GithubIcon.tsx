@@ -1,12 +1,15 @@
 import * as React from "react";
 import { useState } from "react";
 
-function GithubIcon() {
+interface GithubIconProps {
+  link: string;
+}
+function GithubIcon({ link }: GithubIconProps) {
   const [hovered, handleHover] = useState(false);
   return (
-    <>
+    <a href={link}>
       <svg
-        className="language-tool-icon"
+        className="language-tool-icon github-icon"
         xmlns="http://www.w3.org/2000/svg"
         id="Layer_1"
         viewBox="0 0 27.275 26.602"
@@ -54,7 +57,7 @@ function GithubIcon() {
         </g>
       </svg>
       {hovered ? <div className="language-title">Github</div> : null}
-    </>
+    </a>
   );
 }
 

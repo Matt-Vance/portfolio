@@ -3,13 +3,15 @@ import { useState } from "react";
 import Link from "gatsby-link";
 import Helmet from "react-helmet";
 
+import GithubIcon from "../icons/GithubIcon";
+
 function Header() {
   const [hamburgerActive, handleHamburgerClick] = useState(false);
   return (
     <div
       className="header"
       style={{
-        marginBottom: "1.45rem"
+        marginBottom: "1.45rem",
       }}
     >
       <div
@@ -17,9 +19,14 @@ function Header() {
           margin: "0 auto",
           maxWidth: 960,
           padding: "10px 0 20px 0",
-          textAlign: "center"
+          textAlign: "center",
         }}
       >
+        <div className="header-github">
+          <GithubIcon
+            link={"https://github.com/projectunic0rn/travel-map-ui"}
+          />
+        </div>
         <h1 style={{ margin: 0 }}>
           <Link
             to="/"
@@ -30,7 +37,7 @@ function Header() {
               paddingBottom: "8px",
               fontSize: "20px",
               fontFamily: "Segoe UI, sans-serif",
-              letterSpacing: "4px"
+              letterSpacing: "4px",
             }}
           >
             <span style={{ fontSize: "24px" }}>M</span>ATT{" "}
@@ -68,14 +75,14 @@ const DefaultLayout = ({ location, children }: DefaultLayoutProps) => {
         title="Gatsby Default Starter"
         meta={[
           { name: "description", content: "Sample" },
-          { name: "keywords", content: "sample, something" }
+          { name: "keywords", content: "sample, something" },
         ]}
       />
       <Header />
       <div
         className="main"
         style={{
-          maxWidth: 960
+          maxWidth: 960,
         }}
       >
         {children}

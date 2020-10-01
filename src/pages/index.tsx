@@ -7,11 +7,11 @@ import Layout from "../components/layout";
 import ReactIcon from "../icons/ReactIcon";
 import NodeJsIcon from "../icons/NodeJsIcon";
 import GraphQlIcon from "../icons/GraphQlIcon";
-import TypescriptIcon from "../icons/TypescriptIcon";
 import JavascriptIcon from "../icons/JavascriptIcon";
 import PostgresqlIcon from "../icons/PostgreSqlIcon";
+import Contact from './Contact';
 
-import "../layouts/index.css";
+import "../layouts/index.scss";
 
 // Please note that you can use https://github.com/dotansimha/graphql-code-generator
 // to generate all types from graphQL schema
@@ -36,7 +36,7 @@ const Index = ({ data }: IndexPageProps) => {
     true,
     true,
     true,
-    true
+    true,
   ]);
   function iconClicked(iconIndex: IconIndex) {
     if (iconsActive.indexOf(false) === -1) {
@@ -66,9 +66,8 @@ const Index = ({ data }: IndexPageProps) => {
             junior designer <span>and</span>
           </span>
           <span>web developer</span>
-          <span>
-            <span>based in</span> southern california
-          </span>
+          <span><span>based in</span></span>
+          <span>southern california</span>
         </div>
         <div
           className="project-language-container"
@@ -90,7 +89,7 @@ const Index = ({ data }: IndexPageProps) => {
             onClick={() => iconClicked({ index: 2 })}
             style={{ opacity: iconsActive[2] ? 1 : 0.25 }}
           >
-            <TypescriptIcon />
+            <PostgresqlIcon />
           </span>
           <span
             onClick={() => iconClicked({ index: 3 })}
@@ -104,18 +103,12 @@ const Index = ({ data }: IndexPageProps) => {
           >
             <GraphQlIcon />
           </span>
-          <span
-            onClick={() => iconClicked({ index: 5 })}
-            style={{ opacity: iconsActive[5] ? 1 : 0.25 }}
-          >
-            <PostgresqlIcon />
-          </span>
           <label className="language-filter-label">Click to Filter</label>
         </div>
         <div className="project-timeline-container">
           <Timeline year={2020} />
           <div className="timeline-projects">
-            {iconsActive[0] || iconsActive[1] || iconsActive[2] ? (
+            {iconsActive[0] || iconsActive[1] ? (
               <Project
                 name="PORTFOLIO"
                 description="this website"
@@ -130,10 +123,10 @@ const Index = ({ data }: IndexPageProps) => {
             iconsActive[1] ||
             iconsActive[3] ||
             iconsActive[4] ||
-            iconsActive[5] ? (
+            iconsActive[2] ? (
               <Project
                 name="GEORNAL"
-                description="travel tracking web-app"
+                description="social travel tracker"
                 img="geornal"
                 color="#E7EAEE"
               />
@@ -178,8 +171,7 @@ const Index = ({ data }: IndexPageProps) => {
             ) : null}
           </div>
         </div>
-
-        {/* <Link to="/page-2/">Go to page 2</Link> */}
+        <Contact />
       </div>
     </Layout>
   );
