@@ -1,4 +1,3 @@
-@import "./header.scss";
 @import "../pages/landing.scss";
 @import "../components//project.scss";
 @import "../components/timeline.scss";
@@ -640,9 +639,9 @@ pre tt:after {
 .main {
   padding: 100px 24px 0 24px;
   margin: 0 auto;
-  @media screen and (min-width: 600px){
+  @media screen and (min-width: 600px) {
     display: flex;
-    justify-content: center; 
+    justify-content: center;
   }
 }
 
@@ -651,6 +650,19 @@ pre tt:after {
   width: 100%;
   background: #f6f6f6;
   z-index: 100;
+}
+
+.header-github {
+  width: 28px;
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  a .github-icon path {
+    fill: rgb(191, 191, 191);
+  }
+  .language-title {
+    display: none;
+  }
 }
 
 .ham {
@@ -720,6 +732,7 @@ pre tt:after {
 .nav-menu.hide {
   height: 0;
   padding: 0;
+  display: none;
 }
 
 .nav-menu.hide a {
@@ -739,14 +752,41 @@ pre tt:after {
   -webkit-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
-  color: #DEBB82;
+  color: #debb82;
   font-weight: 550;
   letter-spacing: 2px;
 }
 
 .nav-menu a:hover {
-  background: #DEBB82;
+  background: #debb82;
   color: rgb(248, 248, 252);
+}
+
+.contact-form-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 300px;
+  height: 100px;
+  background: #f8f8fc;
+  border-radius: 8px;
+  box-shadow: 0px 1px 0 1px rgba(0, 0, 0, 0.15);
+  margin: 20px auto;
+  svg {
+    width: 60px;
+    height: 60px;
+  }
+  .linkedin-icon {
+    fill: rgb(220, 220, 220);
+    border-radius: 50%;
+  }
+
+  .email-icon {
+    fill: rgb(220, 220, 220);
+  }
+  .github-icon path {
+    fill: rgb(220, 220, 220);
+  }
 }
 
 @media only screen and (max-width: 480px) {

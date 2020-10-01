@@ -7,15 +7,24 @@ import ReactIcon from "../icons/ReactIcon";
 import NodeJsIcon from "../icons/NodeJsIcon";
 import GraphQlIcon from "../icons/GraphQlIcon";
 import GithubIcon from "../icons/GithubIcon";
+import DemoIcon from "../icons/DemoIcon";
 
 const GeornalPage = () => (
   <Layout>
     <div className="project-specific-container">
       <div className="project-info-container">
-        <span>
-          GEORNAL<span className="year-line"></span>
-        </span>
-        <span>travel tracking web-app</span>
+        <div className="project-title-container">
+          <div className="project-title-sub">
+            <span>
+              GEORNAL<span className="year-line"></span>
+            </span>
+            <span>social travel tracker</span>
+          </div>
+          <div className="project-title-icons">
+            <GithubIcon link={"https://github.com/projectunic0rn/travel-map-ui"}/>
+            <DemoIcon link={"https://geornal.herokuapp.com"} />
+          </div>
+        </div>
         <p>
           Geornal is a map-based website which allows users to showcase cities
           they have been or will travel to on an interactive map and record
@@ -29,9 +38,6 @@ const GeornalPage = () => (
           planning process. It is still in "beta" and was built in collaboration
           with a couple of people on the online coding group "Project Unicorn"
         </p>
-        <span className = 'goto-website'>
-          <a href="https://geornal.herokuapp.com">Go to Website</a>
-        </span>
       </div>
       <div className="project-language-container">
         <span>
@@ -43,11 +49,8 @@ const GeornalPage = () => (
         <span>
           <GraphQlIcon />
         </span>
-        <span>
-          <GithubIcon />
-        </span>
       </div>
-      <div className = 'project-challenges-container'>
+      <div className="project-challenges-container">
         <span>EXPERIENCE GAINED</span>
         <ul>
           <li>Working with map libraries</li>

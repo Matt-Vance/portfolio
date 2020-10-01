@@ -4,15 +4,25 @@ import Layout from "../components/layout";
 import ProjectSpecific from "../components/projectSpecific";
 import JavascriptIcon from "../icons/JavascriptIcon";
 import ReactIcon from "../icons/ReactIcon";
+import GithubIcon from "../icons/GithubIcon";
+import DemoIcon from "../icons/DemoIcon";
 
 const TodolistPage = () => (
   <Layout>
     <div className="project-specific-container">
       <div className="project-info-container">
-        <span>
-          TO DO LIST<span className="year-line"></span>
-        </span>
-        <span>daily/weekly/monthly task list</span>
+        <div className="project-title-container">
+          <div className="project-title-sub">
+            <span>
+            TO DO LIST<span className="year-line"></span>
+            </span>
+            <span>daily/weekly/monthly task list</span>
+          </div>
+          <div className="project-title-icons">
+            <GithubIcon link={"https://github.com/mvance43776/todo-list-app"}/>
+            <DemoIcon link={"https://objective-hodgkin-95dbf3.netlify.app"} />
+          </div>
+        </div>
         <p>
           This to do list is for recurring tasks and was made as a concept and
           learning project only. Tasks can be added/deleted as well as
@@ -25,9 +35,6 @@ const TodolistPage = () => (
           basic web app like working with dates, nav menus, and state/props of
           components.
         </p>
-        <span className="goto-website">
-          <a href="https://tasklist-mv.herokuapp.com/">Go to Website</a>
-        </span>
       </div>
       <div className="project-language-container">
         <JavascriptIcon />

@@ -50,6 +50,12 @@
   font-size: 16px;
 }
 
+.project-title-icons {
+  a .github-icon path {
+    fill: rgb(102, 102, 102);
+  }
+}
+
 .project-hover {
   position: absolute;
   top: 0;

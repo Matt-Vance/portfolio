@@ -9,6 +9,7 @@ import NodeJsIcon from "../icons/NodeJsIcon";
 import GraphQlIcon from "../icons/GraphQlIcon";
 import JavascriptIcon from "../icons/JavascriptIcon";
 import PostgresqlIcon from "../icons/PostgreSqlIcon";
+import Contact from './Contact';
 
 import "../layouts/index.scss";
 
@@ -35,7 +36,7 @@ const Index = ({ data }: IndexPageProps) => {
     true,
     true,
     true,
-    true
+    true,
   ]);
   function iconClicked(iconIndex: IconIndex) {
     if (iconsActive.indexOf(false) === -1) {
@@ -65,9 +66,8 @@ const Index = ({ data }: IndexPageProps) => {
             junior designer <span>and</span>
           </span>
           <span>web developer</span>
-          <span>
-            <span>based in</span> southern california
-          </span>
+          <span><span>based in</span></span>
+          <span>southern california</span>
         </div>
         <div
           className="project-language-container"
@@ -126,7 +126,7 @@ const Index = ({ data }: IndexPageProps) => {
             iconsActive[2] ? (
               <Project
                 name="GEORNAL"
-                description="travel tracking web-app"
+                description="social travel tracker"
                 img="geornal"
                 color="#E7EAEE"
               />
@@ -171,6 +171,7 @@ const Index = ({ data }: IndexPageProps) => {
             ) : null}
           </div>
         </div>
+        <Contact />
       </div>
     </Layout>
   );
