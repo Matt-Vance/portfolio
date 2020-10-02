@@ -9,7 +9,9 @@ import NodeJsIcon from "../icons/NodeJsIcon";
 import GraphQlIcon from "../icons/GraphQlIcon";
 import JavascriptIcon from "../icons/JavascriptIcon";
 import PostgresqlIcon from "../icons/PostgreSqlIcon";
-import Contact from './Contact';
+import EmailIcon from "../icons/EmailIcon";
+import GithubIcon from "../icons/GithubIcon";
+import LinkedinIcon from "../icons/LinkedinIcon";
 
 import "../layouts/index.scss";
 import FilterIcon from "../icons/FilterIcon";
@@ -24,9 +26,9 @@ interface IndexPageProps {
       };
     };
   };
-    location: {
-      pathname: string
-    }
+  location: {
+    pathname: string;
+  };
 }
 
 interface IconIndex {
@@ -70,7 +72,9 @@ const Index = ({ data, location }: IndexPageProps) => {
             junior designer <span>and</span>
           </span>
           <span>web developer</span>
-          <span><span>based in</span></span>
+          <span>
+            <span>based in</span>
+          </span>
           <span>southern california</span>
         </div>
         <div
@@ -107,7 +111,16 @@ const Index = ({ data, location }: IndexPageProps) => {
           >
             <GraphQlIcon />
           </span>
-          <label className="language-filter-label" style={{ fill: iconsActive.indexOf(false) ? "rgb(191, 191, 191)" : "#787878"}}><FilterIcon/></label>
+          <label
+            className="language-filter-label"
+            style={{
+              fill: iconsActive.indexOf(false)
+                ? "rgb(191, 191, 191)"
+                : "#787878",
+            }}
+          >
+            <FilterIcon />
+          </label>
         </div>
         <div className="project-timeline-container">
           <Timeline year={2020} />
@@ -175,7 +188,11 @@ const Index = ({ data, location }: IndexPageProps) => {
             ) : null}
           </div>
         </div>
-        <Contact />
+        <section className="contact-form-container">
+          <EmailIcon />
+          <GithubIcon link="https://github.com/mvance43776" />
+          <LinkedinIcon link="https://www.linkedin.com/in/matt-vance-8b169265" />
+        </section>
       </div>
     </Layout>
   );
