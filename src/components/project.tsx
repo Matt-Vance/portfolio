@@ -42,7 +42,7 @@ function Project({ name, description, img, color }: ProjectProps) {
       }
       pomodoro: file(relativePath: { eq: "Pomodoro.PNG" }) {
         childImageSharp {
-          fixed(width: 800) {
+          fixed(width: 590) {
             ...GatsbyImageSharpFixed
           }
         }
