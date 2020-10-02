@@ -75,10 +75,9 @@
   position: absolute;
   display: flex;
   justify-content: center;
-  bottom: -24px;
-  left: calc(50% - 100px);
-  width: 200px;
-  color: rgb(212, 212, 212);
+  margin: 8px auto;
+  top: 48px;
+  width: 60px;
 }
 
 .timeline-container {

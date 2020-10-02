@@ -9,9 +9,15 @@ import GraphQlIcon from "../icons/GraphQlIcon";
 import GithubIcon from "../icons/GithubIcon";
 import DemoIcon from "../icons/DemoIcon";
 
-const GeornalPage = () => (
-  <Layout>
-    <div className="project-specific-container">
+interface ProjectProps {
+  location: {
+    pathname: string
+  }
+}
+
+const GeornalPage = ({location}: ProjectProps) => (
+  <Layout location={location}>
+    <div className="project-specific-container" >
       <div className="project-info-container">
         <div className="project-title-container">
           <div className="project-title-sub">

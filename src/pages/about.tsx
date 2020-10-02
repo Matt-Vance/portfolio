@@ -4,7 +4,13 @@ import Img from "gatsby-image";
 
 import Layout from "../components/layout";
 
-function About() {
+interface ProjectProps {
+  location: {
+    pathname: string;
+  };
+}
+
+function About({ location }: ProjectProps) {
   const data = useStaticQuery(graphql`
     query {
       aboutImage: file(relativePath: { eq: "IMG_5454.JPG" }) {
@@ -19,7 +25,7 @@ function About() {
     }
   `);
   return (
-    <Layout>
+    <Layout location={location}>
       <div className="about-container">
         <div className="profile-image">
           <Img fixed={data['aboutImage'].childImageSharp.fixed} />

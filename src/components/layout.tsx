@@ -24,7 +24,7 @@ function Header() {
       >
         <div className="header-github">
           <GithubIcon
-            link={"https://github.com/projectunic0rn/travel-map-ui"}
+            link={"https://github.com/mvance43776"}
           />
         </div>
         <h1 style={{ margin: 0 }}>

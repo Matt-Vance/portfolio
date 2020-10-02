@@ -12,6 +12,7 @@ import PostgresqlIcon from "../icons/PostgreSqlIcon";
 import Contact from './Contact';
 
 import "../layouts/index.scss";
+import FilterIcon from "../icons/FilterIcon";
 
 // Please note that you can use https://github.com/dotansimha/graphql-code-generator
 // to generate all types from graphQL schema
@@ -23,13 +24,16 @@ interface IndexPageProps {
       };
     };
   };
+    location: {
+      pathname: string
+    }
 }
 
 interface IconIndex {
   index: number;
 }
 
-const Index = ({ data }: IndexPageProps) => {
+const Index = ({ data, location }: IndexPageProps) => {
   const [iconsActive, handleIconsActive] = useState([
     true,
     true,
@@ -56,7 +60,7 @@ const Index = ({ data }: IndexPageProps) => {
   }
 
   return (
-    <Layout>
+    <Layout location={location}>
       <div>
         <div
           className="index-tagline"
@@ -103,7 +107,7 @@ const Index = ({ data }: IndexPageProps) => {
           >
             <GraphQlIcon />
           </span>
-          <label className="language-filter-label">Click to Filter</label>
+          <label className="language-filter-label" style={{ fill: iconsActive.indexOf(false) ? "rgb(191, 191, 191)" : "#787878"}}><FilterIcon/></label>
         </div>
         <div className="project-timeline-container">
           <Timeline year={2020} />

@@ -1,9 +1,11 @@
 import * as React from "react";
-import { useState } from "react";
 
-
-function LinkedinIcon() {
+interface LinkedinIconProps {
+  link: string;
+}
+function LinkedinIcon({ link }: LinkedinIconProps) {
   return (
+    <a href={link}>
       <svg
         className="linkedin-icon social-icon"
         xmlns="http://www.w3.org/2000/svg"
@@ -32,6 +34,7 @@ function LinkedinIcon() {
           </g>
         </g>
       </svg>
+    </a>
   );
 }
 

@@ -7,19 +7,25 @@ import ReactIcon from "../icons/ReactIcon";
 import GithubIcon from "../icons/GithubIcon";
 import DemoIcon from "../icons/DemoIcon";
 
-const TodolistPage = () => (
-  <Layout>
+interface ProjectProps {
+  location: {
+    pathname: string;
+  };
+}
+
+const TodolistPage = ({ location }: ProjectProps) => (
+  <Layout location={location}>
     <div className="project-specific-container">
       <div className="project-info-container">
         <div className="project-title-container">
           <div className="project-title-sub">
             <span>
-            TO DO LIST<span className="year-line"></span>
+              TO DO LIST<span className="year-line"></span>
             </span>
             <span>daily/weekly/monthly task list</span>
           </div>
           <div className="project-title-icons">
-            <GithubIcon link={"https://github.com/mvance43776/todo-list-app"}/>
+            <GithubIcon link={"https://github.com/mvance43776/todo-list-app"} />
             <DemoIcon link={"https://objective-hodgkin-95dbf3.netlify.app"} />
           </div>
         </div>

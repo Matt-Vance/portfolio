@@ -4,8 +4,14 @@ import Layout from "../components/layout";
 import ProjectSpecific from "../components/projectSpecific";
 import JavascriptIcon from "../icons/JavascriptIcon";
 
-const MamallamaPage = () => (
-  <Layout>
+interface ProjectProps {
+  location: {
+    pathname: string;
+  };
+}
+
+const MamallamaPage = ({ location }: ProjectProps) => (
+  <Layout location={location}>
     <div className="project-specific-container">
       <div className="project-info-container">
         <span>
@@ -22,14 +28,14 @@ const MamallamaPage = () => (
           HTML/CSS-only website. It tried to emphasize readabiilty and
           simplicity with big text and lots of white-space.
         </p>
-        <span className = 'goto-website'>
+        <span className="goto-website">
           <a href="https://geornal.herokuapp.com">Go to Website</a>
         </span>
       </div>
       <div className="project-language-container">
         <JavascriptIcon />
       </div>
-      <div className = 'project-challenges-container'>
+      <div className="project-challenges-container">
         <span>EXPERIENCE GAINED</span>
         <ul>
           <li>Very basic JS</li>
