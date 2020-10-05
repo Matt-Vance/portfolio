@@ -13,37 +13,38 @@ interface ProjectProps {
 function Project({ name, description, img, color }: ProjectProps) {
   const data = useStaticQuery(graphql`
     query {
+      portfolio: file(relativePath: { eq: "Portfolio_Main.PNG" }) {
+        childImageSharp {
+          fluid(maxWidth: 2800, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
       geornal: file(relativePath: { eq: "Geornal.PNG" }) {
-        childImageSharp {          fixed(width: 1200, height: 600) {
-            ...GatsbyImageSharpFixed
+        childImageSharp {
+          fluid(maxWidth: 2800, quality: 100) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       cryptophan: file(relativePath: { eq: "CryptoPhan.PNG" }) {
         childImageSharp {
-          fixed(width: 1200, height: 600) {
-            ...GatsbyImageSharpFixed
+          fluid(maxWidth: 2800, quality: 100) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       mamallamadoula: file(relativePath: { eq: "Mamallamadoula.PNG" }) {
         childImageSharp {
-          fixed(width: 740, height: 370){
-            ...GatsbyImageSharpFixed
+          fluid(maxWidth: 2800, quality: 100) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       tasklist: file(relativePath: { eq: "Todo_Tasks.PNG" }) {
         childImageSharp {
-          fixed(width: 1200, height: 600) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
-      pomodoro: file(relativePath: { eq: "Pomodoro.PNG" }) {
-        childImageSharp {
-          fixed(width: 590) {
-            ...GatsbyImageSharpFixed
+          fluid(maxWidth: 2800, maxHeight: 1450, quality: 100) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -51,14 +52,23 @@ function Project({ name, description, img, color }: ProjectProps) {
   `);
 
   return (
-    <Link to={"/projects-" + name.toLowerCase().split(' ').join('') + "/"}>
+    <Link
+      to={
+        "/projects-" +
+        name
+          .toLowerCase()
+          .split(" ")
+          .join("") +
+        "/"
+      }
+    >
       <div className="project-container">
         <div
           className="project-display-container"
           style={{ background: color }}
         >
           <span>
-            <Img fixed={data[img].childImageSharp.fixed} />
+            <Img fluid={data[img].childImageSharp.fluid} />
           </span>
         </div>
         <div className="project-info-container">

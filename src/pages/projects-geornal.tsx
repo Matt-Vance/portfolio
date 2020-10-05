@@ -33,11 +33,10 @@ const GeornalPage = ({location}: ProjectProps) => (
         </div>
         <p>
           Geornal is a map-based website which allows users to showcase cities
-          they have been or will travel to on an interactive map and record
-          memories (reviews) of the specific things they have done in their
-          travels. The main goal of the project is to provide a resource which
+          they have been or will travel to on an interactive map. 
+          The main goal of the project is to provide a resource which
           will help guide people's trips by letting them learn from the
-          experiences and reviews of people they actually know.
+          experiences of people they actually know.
         </p>
         <p>
           Geornal was an idea my wife and I had to try to improve our trip

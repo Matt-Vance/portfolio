@@ -5,9 +5,14 @@ import ProjectSpecific from "../components/projectSpecific";
 import JavascriptIcon from "../icons/JavascriptIcon";
 import GithubIcon from "../icons/GithubIcon";
 import DemoIcon from "../icons/DemoIcon";
+interface ProjectProps {
+  location: {
+    pathname: string
+  }
+}
 
-const CryptophanPage = () => (
-  <Layout>
+const CryptophanPage = ({location}: ProjectProps) => (
+  <Layout location={location}>
     <div className="project-specific-container">
       <div className="project-info-container">
         <div className="project-title-container">
@@ -19,7 +24,7 @@ const CryptophanPage = () => (
           </div>
           <div className="project-title-icons">
             <GithubIcon link={"https://github.com/mvance43776/Cryptophan-React"}/>
-            <DemoIcon link={"https://geornal.herokuapp.com"} />
+            <DemoIcon link={"https://optimistic-noether-af9fdc.netlify.app/"} />
           </div>
         </div>
         <p>

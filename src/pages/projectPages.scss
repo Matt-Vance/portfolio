@@ -15,9 +15,8 @@
 .project-language-container {
   position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-  flex-wrap: wrap;
   width: 100%;
   max-width: 400px;
   height: 60px;
@@ -25,34 +24,72 @@
   background: rgb(248, 248, 252);
   border-radius: 8px;
   box-shadow: 0px 1px 0 1px rgba(0, 0, 0, 0.15);
-}
-
-.project-language-container svg {
-  height: 40px;
-  min-width: 60px;
-  transform: translateY(2px);
+  span {
+    position: relative;
+  }
+  svg {
+    height: 30px;
+    min-width: 40px;
+    transform: translateY(2px);
+  }
+  label {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    margin: 8px auto;
+    top: 48px;
+    width: 60px;
+  }
+  .language-title {
+    position: absolute;
+    top: -32px;
+    left: 0;
+    min-width: 60px;
+    display: flex;
+    justify-content: center;
+    color: #b4b4b4;
+    font-size: 14px;
+  }
+  @media screen and (min-width: 360px) {
+    svg {
+      min-width: 60px;
+    }
+  }
+  @media screen and (min-width: 720px) {
+    max-width: 440px;
+    height: 80px;
+    label {
+      top: 60px;
+    }
+    .language-title {
+      top: -40px;
+      left: 8px;
+      font-size: 16px;
+    }
+    svg {
+      min-width: 80px;
+      height: 50px;
+    }
+  }
 }
 
 #language-container-main svg {
-  height: 34px;
-}
-
-.language-title {
-  position: absolute;
-  top: -32px;
-  left: 0;
-  min-width: 60px;
-  display: flex;
-  justify-content: center;
-  color: #b4b4b4;
-  font-size: 14px;
+  height: 28px;
+  @media screen and (min-width: 360px) {
+    height: 34px;
+  }
+  @media screen and (min-width: 720px) {
+    min-width: 80px;
+    height: 50px;
+  }
 }
 
 .project-challenges-container {
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin-top: 12px;
+  max-width: 400px;
+  margin: 12px auto;
   padding: 0 15px;
   font-size: 16px;
   color: #aaaaaa;
@@ -65,19 +102,6 @@
 
 .project-specific-container .language-title {
   top: -24px;
-}
-
-.project-language-container span {
-  position: relative;
-}
-
-.project-language-container label {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  margin: 8px auto;
-  top: 48px;
-  width: 60px;
 }
 
 .timeline-container {

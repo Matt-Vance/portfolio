@@ -63,17 +63,15 @@ const Index = ({ data, location }: IndexPageProps) => {
 
   return (
     <Layout location={location}>
-      <div>
         <div
           className="index-tagline"
-          style={{ display: "flex", flexDirection: "column" }}
         >
           <span>
-            junior designer <span>and</span>
+            junior designer <span>and&nbsp;</span> 
           </span>
           <span>web developer</span>
           <span>
-            <span>based in</span>
+            <span>based in&nbsp;</span>
           </span>
           <span>southern california</span>
         </div>
@@ -129,8 +127,8 @@ const Index = ({ data, location }: IndexPageProps) => {
               <Project
                 name="PORTFOLIO"
                 description="this website"
-                img="geornal"
-                color="#E7EAEE"
+                img="portfolio"
+                color="#ebe2ea"
               />
             ) : null}
           </div>
@@ -176,24 +174,12 @@ const Index = ({ data, location }: IndexPageProps) => {
               />
             ) : null}
           </div>
-          <Timeline year={2017} />
-          <div className="timeline-projects">
-            {iconsActive[0] ? (
-              <Project
-                name="POMODORO"
-                description="digital timer"
-                img="pomodoro"
-                color="#ced5f5"
-              />
-            ) : null}
-          </div>
         </div>
         <section className="contact-form-container">
           <EmailIcon />
           <GithubIcon link="https://github.com/mvance43776" />
           <LinkedinIcon link="https://www.linkedin.com/in/matt-vance-8b169265" />
         </section>
-      </div>
     </Layout>
   );
 };

@@ -1,11 +1,21 @@
 import * as React from "react";
 import { useState } from "react";
+import { useStaticQuery, graphql } from "gatsby";
 import Link from "gatsby-link";
 import Helmet from "react-helmet";
 
 import GithubIcon from "../icons/GithubIcon";
 
 function Header() {
+  const data = useStaticQuery(graphql`
+    {
+      pdf: file(name: { eq: "Vance_Resume_Programming" }) {
+        name
+        extension
+        publicURL
+      }
+    }
+  `);
   const [hamburgerActive, handleHamburgerClick] = useState(false);
   return (
     <div
@@ -23,9 +33,7 @@ function Header() {
         }}
       >
         <div className="header-github">
-          <GithubIcon
-            link={"https://github.com/mvance43776"}
-          />
+          <GithubIcon link={"https://github.com/mvance43776"} />
         </div>
         <h1 style={{ margin: 0 }}>
           <Link
@@ -56,6 +64,9 @@ function Header() {
       <div className={hamburgerActive ? "nav-menu" : "nav-menu hide"}>
         <Link to="/">home</Link>
         <Link to="/about">about</Link>
+        <a href={data.pdf.publicURL} target="_blank">
+          resume
+        </a>
       </div>
     </div>
   );

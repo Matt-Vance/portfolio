@@ -637,11 +637,12 @@ pre tt:after {
 }
 
 .main {
+  display: flex;
+  flex-direction: column;
   padding: 100px 24px 0 24px;
   margin: 0 auto;
-  @media screen and (min-width: 600px) {
-    display: flex;
-    justify-content: center;
+  @media screen and (min-width: 720px) {
+    padding: 100px 40px 0 40px;
   }
 }
 
@@ -675,6 +676,9 @@ pre tt:after {
   position: absolute;
   top: 0;
   right: 0;
+  @media screen and (min-width: 1200px) {
+   display: none; 
+  }
 }
 
 .ham.active {
@@ -727,40 +731,57 @@ pre tt:after {
   cursor: pointer;
   transform: translateY(-70px);
   z-index: -1;
+
 }
 
 .nav-menu.hide {
   height: 0;
   padding: 0;
   display: none;
+  z-index: 2;
+  a, span {
+    opacity: 0;
+  }
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    color: #dec5dd;
+    font-weight: 550;
+    letter-spacing: 2px;
+    &:hover {
+      background: #dec5dd;
+      color: rgb(248, 248, 252);
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-direction: row;
+    width: 300px;
+    min-width: 300px;
+    height: 60px;
+    right: 24px;
+    background: none;
+    a, span {
+      opacity: 1;
+    }
+    a:hover {
+      background: none;
+      color: #caa8c9;
+    }
+    [aria-current] {
+      background: none;
+      color: #5f3b5e;
+
+    }
+  }
 }
 
-.nav-menu.hide a {
-  opacity: 0;
-}
-
-.nav-menu.hide span {
-  opacity: 0;
-}
-
-.nav-menu a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 60px;
-  -webkit-transition: all 0.4s ease;
-  -o-transition: all 0.4s ease;
-  transition: all 0.4s ease;
-  color: #debb82;
-  font-weight: 550;
-  letter-spacing: 2px;
-}
-
-.nav-menu a:hover {
-  background: #debb82;
-  color: rgb(248, 248, 252);
-}
 
 .contact-form-container {
   display: flex;
