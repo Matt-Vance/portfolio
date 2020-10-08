@@ -35,7 +35,7 @@ interface IconIndex {
   index: number;
 }
 
-const Index = ({ data, location }: IndexPageProps) => {
+const Index = ({ location }: IndexPageProps) => {
   const [iconsActive, handleIconsActive] = useState([
     true,
     true,
@@ -44,6 +44,9 @@ const Index = ({ data, location }: IndexPageProps) => {
     true,
     true,
   ]);
+
+  //After the user clicks on a programming icon, this function determines if solely the clicked icon will be used as a filter 
+  //or if all icons need to be re-activated
   function iconClicked(iconIndex: IconIndex) {
     if (iconsActive.indexOf(false) === -1) {
       let newIconsActive = [false, false, false, false, false, false];
@@ -67,11 +70,11 @@ const Index = ({ data, location }: IndexPageProps) => {
           className="index-tagline"
         >
           <span>
-            junior designer <span>and&nbsp;</span> 
+            junior designer and&nbsp;
           </span>
-          <span>web developer</span>
+          <span> web developer</span>
           <span>
-            <span>based in&nbsp;</span>
+            based in&nbsp;
           </span>
           <span>southern california</span>
         </div>

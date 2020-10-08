@@ -5,15 +5,12 @@ interface DemoIconProps {
   link: string;
 }
 function DemoIcon({ link }: DemoIconProps) {
-  const [hovered, handleHover] = useState(false);
   return (
       <a href={link}>
         <svg
           className="language-tool-icon"
           xmlns="http://www.w3.org/2000/svg"
           id="Layer_1"
-          onMouseOver={() => handleHover(true)}
-          onMouseOut={() => handleHover(false)}
           width="24px"
           height="24px"
           viewBox="0 0 24 24"
@@ -34,9 +31,6 @@ function DemoIcon({ link }: DemoIconProps) {
             ></path>
           </g>
         </svg>
-        {hovered ? (
-          <div className="language-title language-title-right">Live Demo</div>
-        ) : null}
       </a>
   );
 }

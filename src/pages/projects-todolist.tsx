@@ -49,7 +49,7 @@ const TodolistPage = ({ location }: ProjectProps) => (
       <div className="project-challenges-container">
         <span>EXPERIENCE GAINED</span>
         <ul>
-          <li>React basics</li>
+          <li>Introduction to React</li>
           <li>More responsiveness practice</li>
         </ul>
       </div>

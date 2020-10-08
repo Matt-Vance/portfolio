@@ -25,9 +25,9 @@ const MamallamaPage = ({ location }: ProjectProps) => (
           </div>
           <div className="project-title-icons">
             <GithubIcon
-              link={"https://github.com/projectunic0rn/travel-map-ui"}
+              link={"https://github.com/mvance43776/Mamallamadoula/tree/master"}
             />
-            <DemoIcon link={"https://geornal.herokuapp.com"} />
+            <DemoIcon link={"https://hungry-booth-992b11.netlify.app/#about"} />
           </div>
         </div>
 
@@ -48,7 +48,6 @@ const MamallamaPage = ({ location }: ProjectProps) => (
       <div className="project-challenges-container">
         <span>EXPERIENCE GAINED</span>
         <ul>
-          <li>Very basic JS</li>
           <li>First try at responsiveness</li>
           <li>Deployment of a website</li>
         </ul>

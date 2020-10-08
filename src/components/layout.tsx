@@ -92,6 +92,7 @@ const DefaultLayout = ({ location, children }: DefaultLayoutProps) => {
       <Header />
       <div
         className="main"
+        role="main"
         style={{
           maxWidth: 960,
         }}

@@ -5,19 +5,15 @@ interface GithubIconProps {
   link: string;
 }
 function GithubIcon({ link }: GithubIconProps) {
-  const [hovered, handleHover] = useState(false);
   return (
-    <a href={link}>
+    <a href={link} aria-label="Github link" role="none" title="Github link" tab-index="1">
       <svg
         className="language-tool-icon github-icon"
         xmlns="http://www.w3.org/2000/svg"
-        id="Layer_1"
         viewBox="0 0 27.275 26.602"
-        onMouseOver={() => handleHover(true)}
-        onMouseOut={() => handleHover(false)}
       >
-        <g id="Group_11" transform="translate(-290.221 -58.431)">
-          <g id="XMLID_1_">
+        <g transform="translate(-290.221 -58.431)">
+          <g>
             <g>
               <path
                 fill="#ffffff"
@@ -56,7 +52,6 @@ function GithubIcon({ link }: GithubIconProps) {
           </g>
         </g>
       </svg>
-      {hovered ? <div className="language-title">Github</div> : null}
     </a>
   );
 }
