@@ -1,12 +1,12 @@
 import * as React from "react";
-import { useState } from "react";
 
 interface DemoIconProps {
   link: string;
 }
 function DemoIcon({ link }: DemoIconProps) {
   return (
-      <a href={link}>
+            <a href={link} aria-label="Demo link" role="none" title="Demo link" tab-index="1">
+
         <svg
           className="language-tool-icon"
           xmlns="http://www.w3.org/2000/svg"

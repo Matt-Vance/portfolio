@@ -2,6 +2,8 @@ import * as React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
 
+import LocationIcon from '../icons/LocationIcon';
+import BirthdayIcon from '../icons/BirthdayIcon';
 import Layout from "../components/layout";
 
 interface ProjectProps {
@@ -30,8 +32,11 @@ function About({ location }: ProjectProps) {
         <div className="profile-image">
           <Img fixed={data['aboutImage'].childImageSharp.fixed} />
         </div>
+        <div className = 'about-basics-container'>
+         <span><LocationIcon /> Temecula, CA</span> 
+         <span><BirthdayIcon /> 27</span> 
+        </div>
         <p>
-          I am a 27 year old manufacturing engineer from Southern California.
           For the past 3+ years I have been learning Web Development as a hobby
           through FreeCodeCamp, Youtube, Medium articles, you name it. I have
           created some projects on my own and through the collaborative group

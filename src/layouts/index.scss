@@ -664,6 +664,11 @@ pre tt:after {
   .language-title {
     display: none;
   }
+  &:hover {
+    a .github-icon path {
+      fill: rgb(102, 102, 102);
+    }
+  }
 }
 
 .ham {
@@ -677,7 +682,7 @@ pre tt:after {
   top: 0;
   right: 0;
   @media screen and (min-width: 1200px) {
-   display: none; 
+    display: none;
   }
 }
 
@@ -746,7 +751,8 @@ pre tt:after {
     &:hover {
       background: #dec5dd;
       color: rgb(248, 248, 252);
-    }}
+    }
+  }
 }
 
 .nav-menu.hide {
@@ -754,7 +760,8 @@ pre tt:after {
   padding: 0;
   display: none;
   z-index: 2;
-  a, span {
+  a,
+  span {
     opacity: 0;
   }
   a {
@@ -782,7 +789,8 @@ pre tt:after {
     height: 60px;
     right: 24px;
     background: none;
-    a, span {
+    a,
+    span {
       opacity: 1;
     }
     a:hover {
@@ -792,11 +800,9 @@ pre tt:after {
     [aria-current] {
       background: none;
       color: #5f3b5e;
-
     }
   }
 }
-
 
 .contact-form-container {
   display: flex;
@@ -811,6 +817,9 @@ pre tt:after {
   svg {
     width: 60px;
     height: 60px;
+    &:hover {
+      fill: rgb(180, 180, 180);
+    }
   }
   .linkedin-icon {
     fill: rgb(220, 220, 220);
@@ -822,6 +831,9 @@ pre tt:after {
   }
   .github-icon path {
     fill: rgb(220, 220, 220);
+    &:hover {
+      fill: rgb(180, 180, 180);
+    }
   }
 }
 
