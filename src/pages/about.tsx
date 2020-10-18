@@ -26,7 +26,7 @@ function About({ location }: ProjectProps) {
     <Layout location={location}>
       <div className="about-container">
         <div className="profile-image">
-          <Img fixed={data['aboutImage'].childImageSharp.fixed} />
+          <Img fixed={data["aboutImage"].childImageSharp.fixed} />
         </div>
         <h3>hello</h3>
         <p>
