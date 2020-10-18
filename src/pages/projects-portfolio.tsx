@@ -57,23 +57,6 @@ const PortfolioPage = ({ location }: ProjectProps) => (
           <li>Introduction to TypeScript</li>
         </ul>
       </div>
-      <div className="timeline-container">
-        <ProjectSpecific
-          description="login/sign-up screen with tutorials"
-          img="geornalSignup"
-          color="#E7EAEE"
-        />
-        <ProjectSpecific
-          description="adding countries/cities via popup"
-          img="geornalPersonal"
-          color="#DAE4F4"
-        />
-        <ProjectSpecific
-          description="shows cities of all friends"
-          img="geornalFriends"
-          color="#E6E2ED"
-        />
-      </div>
     </div>
   </Layout>
 );

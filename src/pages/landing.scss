@@ -6,7 +6,8 @@
   @media screen and (min-width: 720px) {
     flex-direction: row;
     flex-wrap: wrap;
-    max-width: 440px;
+    // justify-content: center;
+    max-width: 400px;
     height: 80px;
     margin: 0 auto 40px;
   }
@@ -23,6 +24,11 @@
 .project-timeline-container {
   display: flex;
   flex-direction: column;
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
 .timeline-projects {
@@ -40,4 +46,18 @@
   a {
     width: 100%;
   }
+  @media screen and (min-width: 1200px) {
+    min-width: 400px;
+    max-height: 300px;
+    margin: 8px 0;
+  }
+}
+
+.contact-spacer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 220px;
+  min-width: 400px;
+  margin: 8px 0;
 }

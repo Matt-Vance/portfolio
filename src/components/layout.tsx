@@ -4,6 +4,7 @@ import { useStaticQuery, graphql } from "gatsby";
 import Link from "gatsby-link";
 import Helmet from "react-helmet";
 
+import favicon from "../images/favicon.png";
 import GithubIcon from "../icons/GithubIcon";
 
 function Header() {
@@ -83,12 +84,21 @@ const DefaultLayout = ({ location, children }: DefaultLayoutProps) => {
   return (
     <div>
       <Helmet
-        title="Gatsby Default Starter"
+        title="Portfolio"
         meta={[
-          { name: "description", content: "Sample" },
-          { name: "keywords", content: "sample, something" },
+          {
+            name: "description",
+            content:
+              "My developer portfolio with projects showcasing current and previous skill levels",
+          },
+          {
+            name: "keywords",
+            content: "portfolio, react, developer, gatsby, graphql, mapbox",
+          },
         ]}
-      />
+      >
+        <link rel="icon" href={favicon} />
+      </Helmet>
       <Header />
       <div
         className="main"
