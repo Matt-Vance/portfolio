@@ -13,7 +13,7 @@ interface ProjectProps {
 function About({ location }: ProjectProps) {
   const data = useStaticQuery(graphql`
     query {
-      aboutImg: file(relativePath: { eq: "IMG_5454.jpg" }) {
+      aboutImg: file(relativePath: { eq: "IMG_5454.JPG" }) {
         childImageSharp {
           fixed(width: 200, height: 200) {
             ...GatsbyImageSharpFixed
@@ -26,7 +26,7 @@ function About({ location }: ProjectProps) {
     <Layout location={location}>
       <div className="about-container">
         <div className="profile-image">
-          <Img fixed={data["aboutImg"].childImageSharp.fixed} />
+          <Img fixed={data['aboutImg'].childImageSharp.fixed} />
         </div>
         <h3>hello</h3>
         <p>
