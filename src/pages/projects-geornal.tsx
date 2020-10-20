@@ -55,7 +55,7 @@ const GeornalPage = ({location}: ProjectProps) => (
           <GraphQlIcon />
         </span>
       </div>
-      <div className="project-challenges-container">
+      <div className="project-challenges-container">0.
         <span>EXPERIENCE GAINED</span>
         <ul>
           <li>Working with map libraries</li>
