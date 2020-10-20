@@ -1,6 +1,6 @@
 import * as React from "react";
 
-function EmailIcon() {
+function EmailIcon(){
   return (
     <svg
       className="email-icon"

@@ -14,6 +14,7 @@ import LinkedinIcon from "../icons/LinkedinIcon";
 
 import "../layouts/index.scss";
 import FilterIcon from "../icons/FilterIcon";
+import ContactForm from "../components/contactForm";
 
 // Please note that you can use https://github.com/dotansimha/graphql-code-generator
 // to generate all types from graphQL schema
@@ -43,6 +44,7 @@ const Index = ({ location }: IndexPageProps) => {
     true,
     true,
   ]);
+  const [contactForm, handleContactForm] = useState(false);
 
   //After the user clicks on a programming icon, this function determines if solely the clicked icon will be used as a filter
   //or if all icons need to be re-activated
@@ -63,6 +65,10 @@ const Index = ({ location }: IndexPageProps) => {
         handleIconsActive(newIconsActive);
       }
     }
+  }
+
+  function showContactForm() {
+    handleContactForm(!contactForm);
   }
 
   return (
@@ -188,10 +194,17 @@ const Index = ({ location }: IndexPageProps) => {
         </div>
         <div className="contact-spacer">
           <section className="contact-form-container">
-            <EmailIcon />
+            <span onClick={showContactForm}>
+              <EmailIcon />
+            </span>
             <GithubIcon link="https://github.com/mvance43776" />
             <LinkedinIcon link="https://www.linkedin.com/in/matt-vance-8b169265" />
           </section>
+          {contactForm ? (
+            <>
+              <ContactForm /> <div className="contact-form-backing" onClick = {showContactForm}/>
+            </>
+          ) : null}
         </div>
       </div>
     </Layout>
