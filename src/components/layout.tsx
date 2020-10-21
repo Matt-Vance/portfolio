@@ -34,7 +34,7 @@ function Header() {
         }}
       >
         <div className="header-github">
-          <GithubIcon link={"https://github.com/mvance43776"} />
+          <GithubIcon link={"https://github.com/matt-vance"} />
         </div>
         <h1 style={{ margin: 0 }}>
           <Link

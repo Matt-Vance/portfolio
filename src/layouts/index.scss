@@ -203,7 +203,7 @@ textarea {
 html {
   font: 112.5%/1.45em "Segoe UI", georgia, serif;
   box-sizing: border-box;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 * {
   box-sizing: inherit;
@@ -642,7 +642,7 @@ pre tt:after {
   padding: 100px 24px 0 24px;
   margin: 0 auto;
   @media screen and (min-width: 720px) {
-    padding: 100px 40px 0 40px;
+    padding: 80px 40px 0 40px;
   }
 }
 

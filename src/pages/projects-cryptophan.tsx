@@ -23,7 +23,7 @@ const CryptophanPage = ({location}: ProjectProps) => (
             <span>cryptocurrency tracker</span>
           </div>
           <div className="project-title-icons">
-            <GithubIcon link={"https://github.com/mvance43776/Cryptophan-React"}/>
+            <GithubIcon link={"https://github.com/matt-vance/Cryptophan-JSOnly"}/>
             <DemoIcon link={"https://optimistic-noether-af9fdc.netlify.app/"} />
           </div>
         </div>

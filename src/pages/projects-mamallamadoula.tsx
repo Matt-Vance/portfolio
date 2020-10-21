@@ -25,9 +25,9 @@ const MamallamaPage = ({ location }: ProjectProps) => (
           </div>
           <div className="project-title-icons">
             <GithubIcon
-              link={"https://github.com/mvance43776/Mamallamadoula/tree/master"}
+              link={"https://github.com/matt-vance/Mamallamadoula/tree/master"}
             />
-            <DemoIcon link={"https://hungry-booth-992b11.netlify.app/#about"} />
+            <DemoIcon link={"https://hungry-booth-992b11.netlify.app/"} />
           </div>
         </div>
 

@@ -5,7 +5,7 @@ interface LinkedinIconProps {
 }
 function LinkedinIcon({ link }: LinkedinIconProps) {
   return (
-    <a href={link}>
+    <a href={link} target="_blank">
       <svg
         className="linkedin-icon social-icon"
         xmlns="http://www.w3.org/2000/svg"

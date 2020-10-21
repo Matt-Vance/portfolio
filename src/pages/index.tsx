@@ -197,7 +197,7 @@ const Index = ({ location }: IndexPageProps) => {
             <span onClick={showContactForm}>
               <EmailIcon />
             </span>
-            <GithubIcon link="https://github.com/mvance43776" />
+            <GithubIcon link="https://github.com/Matt-Vance/" />
             <LinkedinIcon link="https://www.linkedin.com/in/matt-vance-8b169265" />
           </section>
           {contactForm ? (

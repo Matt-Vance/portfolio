@@ -25,7 +25,7 @@ const TodolistPage = ({ location }: ProjectProps) => (
             <span>daily/weekly/monthly task list</span>
           </div>
           <div className="project-title-icons">
-            <GithubIcon link={"https://github.com/mvance43776/todo-list-app"} />
+            <GithubIcon link={"https://github.com/matt-vance/todo-list-app"} />
             <DemoIcon link={"https://objective-hodgkin-95dbf3.netlify.app"} />
           </div>
         </div>
