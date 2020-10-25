@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import Link from "gatsby-link";
 import Helmet from "react-helmet";
+import "../layouts/index.scss";
 
 import favicon from "../images/favicon.png";
 import GithubIcon from "../icons/GithubIcon";
