@@ -41,6 +41,7 @@ export default class HTML extends React.Component {
             data-netlify="true"
             data-netlify-honeypot="bot-field"
             action="/success"
+            hidden
           >
             <p hidden>
               <label>
