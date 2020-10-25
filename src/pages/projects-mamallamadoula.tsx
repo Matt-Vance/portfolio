@@ -43,7 +43,9 @@ const MamallamaPage = ({ location }: ProjectProps) => (
         </p>
       </div>
       <div className="project-language-container">
-        <JavascriptIcon />
+        <span>
+          <JavascriptIcon />
+        </span>
       </div>
       <div className="project-challenges-container">
         <span>EXPERIENCE GAINED</span>

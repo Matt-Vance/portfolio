@@ -37,7 +37,6 @@ function ContactForm() {
       onSubmit={handleSubmit}
       action="/success"
     >
-      <input type="hidden" name="bot-field" />
       <p hidden>
         <label>
           Don’t fill this out:

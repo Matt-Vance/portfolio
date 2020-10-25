@@ -43,8 +43,12 @@ const TodolistPage = ({ location }: ProjectProps) => (
         </p>
       </div>
       <div className="project-language-container">
-        <JavascriptIcon />
-        <ReactIcon />
+        <span>
+          <JavascriptIcon />
+        </span>
+        <span>
+          <ReactIcon />
+        </span>
       </div>
       <div className="project-challenges-container">
         <span>EXPERIENCE GAINED</span>
