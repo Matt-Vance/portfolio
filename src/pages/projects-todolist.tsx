@@ -22,7 +22,7 @@ const TodolistPage = ({ location }: ProjectProps) => (
             <span>
               TO DO LIST<span className="year-line"></span>
             </span>
-            <span>daily/weekly/monthly task list</span>
+            <span>day/week/month task list</span>
           </div>
           <div className="project-title-icons">
             <GithubIcon link={"https://github.com/matt-vance/todo-list-app"} />

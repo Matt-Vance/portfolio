@@ -19,6 +19,11 @@ function Header() {
     }
   `);
   const [hamburgerActive, handleHamburgerClick] = useState(false);
+  function handleHamburgerClickDelay() {
+    setTimeout(() => {
+      handleHamburgerClick(!hamburgerActive);
+    }, 1000);
+  }
   return (
     <div
       className="header"
@@ -65,7 +70,7 @@ function Header() {
       </div>
       <div
         className={hamburgerActive ? "nav-menu" : "nav-menu hide"}
-        onClick={() => handleHamburgerClick(!hamburgerActive)}
+        onClick={handleHamburgerClickDelay}
       >
         <Link to="/">home</Link>
         <Link to="/about">about</Link>
