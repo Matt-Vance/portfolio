@@ -63,7 +63,10 @@ function Header() {
         <span className="middle"></span>
         <span className="bottom"></span>
       </div>
-      <div className={hamburgerActive ? "nav-menu" : "nav-menu hide"}>
+      <div
+        className={hamburgerActive ? "nav-menu" : "nav-menu hide"}
+        onClick={() => handleHamburgerClick(!hamburgerActive)}
+      >
         <Link to="/">home</Link>
         <Link to="/about">about</Link>
         <a href={data.pdf.publicURL} target="_blank">
