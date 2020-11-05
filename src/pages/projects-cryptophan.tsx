@@ -26,7 +26,7 @@ const CryptophanPage = ({ location }: ProjectProps) => (
             <GithubIcon
               link={"https://github.com/matt-vance/Cryptophan-JSOnly"}
             />
-            <DemoIcon link={"https://optimistic-noether-af9fdc.netlify.app/"} />
+            <DemoIcon link={"https://focused-bohr-a8125c.netlify.app/"} />
           </div>
         </div>
         <p>

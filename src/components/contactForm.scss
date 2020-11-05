@@ -1,6 +1,6 @@
 .contact-form {
   position: fixed;
-  top: 25%;
+  top: 68px;
   width: calc(100% - 20px);
   max-width: 600px;
   display: flex;
@@ -67,12 +67,6 @@
 #message-text {
     margin-top: 24px;
 }
-  /**
-    * Translate down and scale the label up to cover the placeholder,
-    * when following an input (with placeholder-shown support).
-    * Also make sure the label is only on one row, at max 2/3rds of the
-    * field—to make sure it scales properly and doesn't wrap.
-    */
   input:placeholder-shown + label {
     cursor: text;
     max-width: 66.66%;
