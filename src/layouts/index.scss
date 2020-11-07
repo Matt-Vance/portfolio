@@ -823,8 +823,19 @@ pre tt:after {
     }
   }
   .linkedin-icon {
-    fill: rgb(220, 220, 220);
-    border-radius: 50%;
+    min-width: 72px;
+    height: 72px;
+    path {
+      fill: rgb(220, 220, 220);
+      stroke:  rgb(220, 220, 220);
+    }
+    &:hover {
+      path {
+        fill: rgb(180, 180, 180);
+        stroke:  rgb(180, 180, 180);
+      }
+      
+    }
   }
 
   .email-icon {

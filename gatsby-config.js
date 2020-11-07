@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Typescript Starter`,
+    title: `Matt Vance portfolio`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
